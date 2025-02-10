@@ -1,7 +1,9 @@
+import { globalStyleConfig } from './appConfig';
+
 export const THEME_ANTD = {
     components: {
         Button: {
-            ghostBg: '#ffeaf9',
+            ghostBg: globalStyleConfig.Button.ghostBg,
         },
     },
 };

@@ -1,0 +1,32 @@
+@use 'sass:color';
+
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import './animation.scss';
+@import './reset.scss';
+@import './responsive.scss';
+@import './variables.scss';
+
+.container-app {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+$colors: (
+    default: rgb(74 108 247 / $tw-bg-opacity),
+    red: rgb(239 68 68 / $tw-bg-opacity),
+);
+
+@each $name, $color in $colors {
+    .primary-btn__#{$name} {
+        background-color: $color !important;
+        color: #fff !important;
+
+        &:hover {
+            color: #fff !important;
+            background-color: color.adjust($color, $lightness: 10%) !important;
+        }
+    }
+}

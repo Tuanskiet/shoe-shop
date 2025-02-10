@@ -24,7 +24,8 @@ const TabChild2 = () => {
 
     return (
         <>
-            <div>TabChild 2</div> <PrimaryButton onClick={handleOnClick}>Back to tab 1</PrimaryButton>
+            <div className="border">TabChild 2</div>{' '}
+            <PrimaryButton onClick={handleOnClick}>Back to tab 1</PrimaryButton>
         </>
     );
 };
